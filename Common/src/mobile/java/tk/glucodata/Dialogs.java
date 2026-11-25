@@ -105,7 +105,7 @@ public class Dialogs {
                         daynr = Float.parseFloat(String.valueOf(days.getText()));
                     } catch (Throwable th) {
 
-                        exportlabel.setText("I don't understand \'" + days.getText() + "\'");
+                        exportlabel.setText(activity.getString(R.string.export_invalid_days, days.getText().toString()));
                         return;
                     }
                     ;

@@ -1093,22 +1093,22 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
     }
 
     private void outofStorageSpace() {
-        String message = "Not enough Storage Space!!";
+        String message = getString(R.string.startup_storage_full);
         Applic.argToaster(this, message, Toast.LENGTH_SHORT);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setNegativeButton(R.string.ok, (dialog, id) -> { // User cancelled the dialog
             finish();
             keeprunning.stop();
             System.exit(7);
-        }).setTitle("Juggluco has to exit").setMessage(message).show().setCanceledOnTouchOutside(false);
+        }).setTitle(R.string.startup_exit_title).setMessage(message).show().setCanceledOnTouchOutside(false);
 
     }
 
     private void makefilesfailed() {
         File files = getFilesDir();
         String filespath = files.getAbsolutePath();
-        String message = "Can't create directory:\n" + filespath
-                + (files.isFile() ? "\nA regular file with that name exists" : "\nNot enough storage space?");
+        String message = getString(R.string.startup_create_directory_failed, filespath,
+                getString(files.isFile() ? R.string.startup_path_is_file : R.string.startup_storage_check));
         Applic.argToaster(this, message, Toast.LENGTH_SHORT);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         Runnable end = () -> {
@@ -1119,7 +1119,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
         var dialog = builder.setNegativeButton(R.string.ok, (dial, id) -> {
             end.run();
             // User cancelled the dialog
-        }).setTitle("Juggluco has to exit").setMessage(message).create();
+        }).setTitle(R.string.startup_exit_title).setMessage(message).create();
         dialog.setCanceledOnTouchOutside(false);
         dialog.setOnShowListener(d -> {
             Log.e(LOG_ID, "setOnShowListener");
@@ -2283,7 +2283,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
         MainActivity main = thisone;
         if (main != null) {
             AlertDialog.Builder builder = new AlertDialog.Builder(main);
-            builder.setTitle("Location").setMessage("System Location needs to be turned on to find Bluetooth devices")
+            builder.setTitle(R.string.cgm_readiness_location_services_title).setMessage(R.string.bluetooth_location_required)
                     .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -2291,7 +2291,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
                         }
                     }).setOnCancelListener(l -> enableLocationSettings()).show().setCanceledOnTouchOutside(false);
         } else {
-            Applic.Toaster("Turn on Location in System settings");
+            Applic.Toaster(R.string.bluetooth_location_required);
         }
     }
 

@@ -533,7 +533,7 @@ CheckBox ICE;
        fromrow=new View[]{startlabel, alldata,fromnow,screenpos};
 
       setradio(sendfrom);
-      CheckBox restore=new CheckBox(act);restore.setText("Restore");
+      CheckBox restore=new CheckBox(act);restore.setText(R.string.restore_action);
       if(!Natives.backuphasrestore( ))
          restore.setVisibility(GONE);
 
@@ -903,7 +903,7 @@ CheckBox ICE;
            closemar.rightMargin=(int)(GlucoseCurve.metrics.density*10);;
            View[] firstrow;
            if(BuildConfig.minSDK>=20) {
-                Button qr=getbutton(act,"QR");
+                Button qr=getbutton(act,R.string.qr);
                 qr.setOnClickListener(v->  {
                       if(pos>=0) {
                             String jsonstr=getbackJson(pos);

@@ -712,7 +712,7 @@ public class bluediag {
         ViewGroup parent = (ViewGroup) resetbutton.getParent();
         if (parent != null) {
             clearbutton = new Button(act);
-            clearbutton.setText("Clear");
+            clearbutton.setText(R.string.clear);
             int index = parent.indexOfChild(resetbutton);
             parent.addView(clearbutton, index + 1);
             clearbutton.setVisibility(GONE);
@@ -733,7 +733,7 @@ public class bluediag {
             });
 
             clearAllButton = new Button(act);
-            clearAllButton.setText("Clear all");
+            clearAllButton.setText(R.string.clear_all_action);
             parent.addView(clearAllButton, index + 2);
             clearAllButton.setVisibility(GONE);
             clearAllButton.setOnClickListener(v -> {
@@ -755,7 +755,7 @@ public class bluediag {
             row.setPadding((int) (GlucoseCurve.metrics.density * 10), 0, 0, 0);
 
             TextView label = new TextView(act);
-            label.setText("Calibration algorithm: ");
+            label.setText(R.string.calibration_algorithm);
             label.setTextColor(WHITE);
             row.addView(label);
 

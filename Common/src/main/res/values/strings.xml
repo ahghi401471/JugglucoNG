@@ -3734,4 +3734,13 @@ Pressing OK will generate a connection on this phone and display a QR code that 
     <string name="floating_layout_camera_desc">Items above it sit before the camera, the rest after it</string>
     <string name="floating_layout_hidden">Hidden</string>
     <string name="floating_layout_order_desc">Drag a handle to move an item</string>
+    <string name="startup_exit_title">Juggluco needs to close</string>
+    <string name="startup_storage_full">Not enough storage space</string>
+    <string name="startup_create_directory_failed">Cannot create the directory:\n%1$s\n%2$s</string>
+    <string name="startup_path_is_file">A file with this name already exists.</string>
+    <string name="startup_storage_check">Check whether the device has enough free storage.</string>
+    <string name="bluetooth_location_required">Turn on Location in Android settings to find Bluetooth devices.</string>
+    <string name="export_invalid_days">Invalid number of days: %1$s</string>
+    <string name="restore_action">Restore</string>
+    <string name="clear_all_action">Clear all</string>
 </resources>
