@@ -1,0 +1,5 @@
+<resources>
+    <string name="wear_journal_insulin">אינסולין</string>
+    <string name="wear_journal_carbs">פחמימות</string>
+    <string name="wear_journal_delete">מחיקה</string>
+</resources>

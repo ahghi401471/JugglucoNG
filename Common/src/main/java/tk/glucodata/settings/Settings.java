@@ -913,7 +913,7 @@ final private static String  codestr=String.valueOf(BuildConfig.VERSION_CODE);
 //static private final List<String> supportedlanguages= Arrays.asList("Language","be","de","en","fr","it","nl","pl","pt","sv","uk","zh");
 //  static private final List<String> supportedlanguages= Arrays.asList("Language","be","de","en","fr","it","nl","pl","pt","sv","uk");
 //static private final List<String> supportedlanguages= Arrays.asList("Language","be","de","en","fr","it","nl","pl","pt");
-static private final List<String> supportedlanguages= SPANISH?Arrays.asList("Language","be","de","en","es","fr","hu","it","nl","pl","pt","ru","so","sv","tr","uk","zh"):Arrays.asList("Language","be","de","en","fr","hu","it","nl","pl","pt","ru","so","sv","tr","uk","zh");
+static private final List<String> supportedlanguages= SPANISH?Arrays.asList("Language","be","de","en","es","fr","he","hu","it","nl","pl","pt","ru","so","sv","tr","uk","zh"):Arrays.asList("Language","be","de","en","fr","he","hu","it","nl","pl","pt","ru","so","sv","tr","uk","zh");
 
 //static private final List<String> supportedlanguages= IWRU?Arrays.asList("Language","be","de","en","es","fr","it","iw","nl","pl","pt","ru","sv","uk"):Arrays.asList("Language","be","de","en","es","fr","it","nl","pl","pt","sv","uk");
 static public Spinner getGenSpin(Activity context) {
@@ -931,7 +931,7 @@ static private Spinner languagespinner(MainActivity context) {
    var spin=  getGenSpin(context);
     var locales=AppCompatDelegate.getApplicationLocales();
     int prepos;
-    if(locales.isEmpty()||(prepos=supportedlanguages.indexOf(locales.get(0).getLanguage()))<1)
+    if(locales.isEmpty()||(prepos=supportedlanguages.indexOf(locales.get(0).toLanguageTag().split("-")[0]))<1)
         prepos=0;
     final int pos=prepos;
     spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

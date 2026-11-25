@@ -1616,7 +1616,8 @@ internal fun PreviewWindowPickerDialog(
 @Composable
 private fun LanguagePickerDialog(onDismiss: () -> Unit) {
     val languages = listOf(
-        "System" to null,
+        stringResource(R.string.theme_system) to null,
+        "עברית" to "he",
         "English" to "en",
         "Belarusian" to "be",
         "Chinese" to "zh",

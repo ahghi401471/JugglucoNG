@@ -82,6 +82,8 @@ import androidx.annotation.UiThread;
 import androidx.annotation.Keep;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.WindowCompat;
@@ -481,6 +483,18 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
      * }
      * }
      */
+    private void initializeDefaultLanguage() {
+        var preferences = getSharedPreferences("app_language", MODE_PRIVATE);
+        if (preferences.getBoolean("default_initialized", false)) {
+            return;
+        }
+
+        preferences.edit().putBoolean("default_initialized", true).apply();
+        if (AppCompatDelegate.getApplicationLocales().isEmpty()) {
+            AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("he"));
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         androidx.core.view.WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
@@ -490,6 +504,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
         }
 
         super.onCreate(savedInstanceState);
+        initializeDefaultLanguage();
         thisone = this;
 
         if (android.os.Build.VERSION.SDK_INT >= 21) {
