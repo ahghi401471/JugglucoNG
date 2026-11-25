@@ -10,10 +10,10 @@
     <string name="scanname">סריקה</string>
     <string name="scansname">סריקות</string>
     <string name="historyname">היסטוריה</string>
-    <string name="streamname">זרם מדידות</string>
+    <string name="streamname">מדידות רציפות</string>
     <string name="resetname">איפוס</string>
     <string name="helpname">עזרה</string>
-    <string name="nobluetooth">אין Bluetooth</string>
+    <string name="nobluetooth">Bluetooth אינו זמין</string>
     <string name="bluetoothenabled">Bluetooth מופעל</string>
     <string name="bluetoothdisabled">Bluetooth כבוי</string>
     <string name="amountsname">כמויות</string>
@@ -31,7 +31,7 @@
     <string name="alarms">התראות</string>
     <string name="save">שמירה</string>
     <string name="addconnectionbutton">הוספת חיבור</string>
-    <string name="glucosestatusbar">התראת גלוקוז</string>
+    <string name="glucosestatusbar">הצגת גלוקוז בשורת ההתראות</string>
     <string name="lowglucosealarm">התראת גלוקוז נמוך</string>
     <string name="ringtonename">צליל התראה</string>
     <string name="highglucosealarm">התראת גלוקוז גבוה</string>
@@ -41,7 +41,7 @@
     <string name="glucoseaxisleft">ציר הגלוקוז משמאל</string>
     <string name="time">שעה</string>
     <string name="glucose">גלוקוז</string>
-    <string name="sensorviabluetooth">חיישן דרך Bluetooth</string>
+    <string name="sensorviabluetooth">קריאת החיישן דרך Bluetooth</string>
     <string name="colors">צבעים</string>
     <string name="remindersname">תזכורות</string>
     <string name="display">תצוגה</string>
@@ -69,7 +69,7 @@
     <string name="defaultname">ברירת מחדל</string>
     <string name="permission">הרשאה</string>
     <string name="value">ערך</string>
-    <string name="port">יציאה</string>
+    <string name="port">פורט</string>
     <string name="copy">העתקה</string>
     <string name="share">שיתוף</string>
     <string name="withoutsensor">ללא חיישן</string>
@@ -128,7 +128,7 @@
     <string name="receive_from">קבלה מ־</string>
     <string name="amounts">כמויות</string>
     <string name="scans">סריקות</string>
-    <string name="stream">זרם מדידות</string>
+    <string name="stream">מדידות רציפות</string>
     <string name="exchanges">שיתוף נתונים</string>
     <string name="dashboard">לוח ראשי</string>
     <string name="stats">סטטיסטיקה</string>
@@ -379,7 +379,7 @@
     <string name="libre_setup_title">הגדרת Libre</string>
     <string name="libre_nfc_instruction">יש לקרב את הטלפון לחיישן כדי לסרוק אותו.</string>
     <string name="libre_setup_step_libreview">חשבון LibreView</string>
-    <string name="libre_setup_step_libreview_desc">העלאה ל־LibreView היא אופציונלית. להפעלת חיישני Libre 3 נדרש מזהה חשבון.</string>
+    <string name="libre_setup_step_libreview_desc">אפשר להפעיל העלאה ל־LibreView לפי הצורך. חיישני Libre 3 זקוקים למזהה חשבון כדי לפעול.</string>
     <string name="libre_setup_step_scan">סריקת החיישן</string>
     <string name="libre_setup_advanced_options_desc">שינוי הגדרות הסריקה הניסיוניות של Libre 3 לפני הצימוד.</string>
     <string name="libre3_nfc_command_title">פקודת NFC ל־Libre 3</string>
@@ -508,7 +508,7 @@
     <string name="nightscout_status_response_404">תגובה אחרונה: HTTP 404. נתיב ה־API אינו תואם.</string>
     <string name="nightscout_status_response_413">תגובה אחרונה: HTTP 413. כמות הנתונים לשליחה גדולה מדי.</string>
     <string name="nightscout_status_last_attempt">ניסיון אחרון: %1$s</string>
-    <string name="nightscout_status_last_success">הצלחה אחרונה: %1$s</string>
+    <string name="nightscout_status_last_success">סנכרון מוצלח אחרון: %1$s</string>
     <string name="nightscout_send_amounts_desc">סנכרון רשומות ביומן, לרבות עריכות ומחיקות</string>
     <string name="nightscout_status_treatments_never">טיפולים: עדיין לא נשלחו רשומות</string>
     <string name="nightscout_status_treatments_ok">טיפולים: שליחה אחרונה ב־%1$s</string>
@@ -653,5 +653,87 @@
     <string name="webserver_help_paths">כתובת הבסיס מספקת את הנתיבים api/v1/entries/current, api/v1/entries ו־x/report.</string>
     <string name="webserver_help_local">לבדיקה מאותו מכשיר יש להפעיל גישה מקומית בלבד. לגישה ממכשירים אחרים באותה רשת יש לכבות אפשרות זו.</string>
     <string name="webserver_help_ssl">כש־SSL מופעל, האפליקציה יוצרת תעודה משלה. אם יש לך תעודה שהונפקה על ידי רשות אישורים, אפשר לייבא אותה.</string>
-    <string name="ssl_port">יציאת SSL</string>
+    <string name="ssl_port">פורט SSL</string>
+    <string name="dashboard_iob_full">אינסולין פעיל: %1$s</string>
+    <string name="dashboard_eiob_full">אינסולין שמשפיע כעת: %1$s</string>
+    <string name="dashboard_cob_full">פחמימות פעילות: %1$s</string>
+    <string name="dashboard_show_delta_title">שינוי בגלוקוז במסך הראשי</string>
+    <string name="dashboard_show_delta_desc">הצגת השינוי שנמדד מתחת לחץ המגמה</string>
+    <string name="dashboard_rows_show_delta_title">שינוי בגלוקוז ברשימת המדידות</string>
+    <string name="dashboard_rows_show_delta_desc">הצגת השינוי שנמדד לצד כל מדידה במסך הראשי ובהיסטוריה</string>
+    <string name="dashboard_show_reading_age_title">זמן מאז המדידה האחרונה</string>
+    <string name="dashboard_show_reading_age_desc">הצגת הזמן שעבר מאז המדידה האחרונה בלוח החיישן</string>
+    <string name="chart_size_label">גודל הגרף</string>
+    <string name="chart_jump_to_date">מעבר לתאריך</string>
+    <string name="chart_back_to_now">חזרה לזמן הנוכחי</string>
+    <plurals name="sensor_expires_in_days">
+        <item quantity="one">תוקף החיישן יפוג בעוד יום אחד</item>
+        <item quantity="two">תוקף החיישן יפוג בעוד יומיים</item>
+        <item quantity="other">תוקף החיישן יפוג בעוד %d ימים</item>
+    </plurals>
+    <plurals name="sensor_expires_in_hours">
+        <item quantity="one">תוקף החיישן יפוג בעוד שעה אחת</item>
+        <item quantity="two">תוקף החיישן יפוג בעוד שעתיים</item>
+        <item quantity="other">תוקף החיישן יפוג בעוד %d שעות</item>
+    </plurals>
+    <plurals name="ottai_saved_sensors_count">
+        <item quantity="one">חיישן אחד שמור בטלפון הזה</item>
+        <item quantity="other">%d חיישנים שמורים בטלפון הזה</item>
+    </plurals>
+    <plurals name="stats_duration_weeks">
+        <item quantity="one">שבוע אחד</item>
+        <item quantity="two">שבועיים</item>
+        <item quantity="other">%1$d שבועות</item>
+    </plurals>
+    <plurals name="insulin_pen_imported_count">
+        <item quantity="one">מנה אחת נוספה ליומן</item>
+        <item quantity="other">%d מנות נוספו ליומן</item>
+    </plurals>
+    <plurals name="insulin_pen_review_count">
+        <item quantity="one">נקראה מנה אחת. יש לפתוח את האפליקציה ולבחור את סוג האינסולין.</item>
+        <item quantity="other">נקראו %d מנות. יש לפתוח את האפליקציה ולבחור את סוג האינסולין.</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="one">שעה אחת</item>
+        <item quantity="two">שעתיים</item>
+        <item quantity="other">%1$d שעות</item>
+    </plurals>
+    <plurals name="journal_chart_marker_count_description">
+        <item quantity="one">רשומה אחת</item>
+        <item quantity="other">%d רשומות</item>
+    </plurals>
+    <plurals name="watch_forwarding_minutes">
+        <item quantity="one">דקה אחת</item>
+        <item quantity="other">%d דקות</item>
+    </plurals>
+    <plurals name="prediction_adaptive_ready">
+        <item quantity="one">ניסיוני · המודל למד ממדידות של יום אחד</item>
+        <item quantity="other">ניסיוני · המודל למד ממדידות של %d ימים</item>
+    </plurals>
+    <plurals name="prediction_analysis_period_days">
+        <item quantity="one">יום אחד</item>
+        <item quantity="other">%d ימים</item>
+    </plurals>
+    <plurals name="prediction_analysis_forecasts">
+        <item quantity="one">תחזית אחת</item>
+        <item quantity="other">%d תחזיות</item>
+    </plurals>
+    <plurals name="prediction_inspector_planned">
+        <item quantity="one">נכללה רשומה מתוכננת אחת מהיומן</item>
+        <item quantity="other">נכללו %d רשומות מתוכננות מהיומן</item>
+    </plurals>
+    <plurals name="restricted_pin_digits_entered">
+        <item quantity="one">הוזנה ספרה אחת</item>
+        <item quantity="other">הוזנו %d ספרות</item>
+    </plurals>
+    <plurals name="restricted_sensor_ends_in_days">
+        <item quantity="one">יסתיים בעוד יום אחד</item>
+        <item quantity="two">יסתיים בעוד יומיים</item>
+        <item quantity="other">יסתיים בעוד %d ימים</item>
+    </plurals>
+    <plurals name="restricted_sensor_ends_in_hours">
+        <item quantity="one">יסתיים בעוד שעה אחת</item>
+        <item quantity="two">יסתיים בעוד שעתיים</item>
+        <item quantity="other">יסתיים בעוד %d שעות</item>
+    </plurals>
 </resources>
